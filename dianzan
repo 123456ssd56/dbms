@@ -1,0 +1,29 @@
+# Like Button System - Simple Version
+like_count = 0
+is_liked = False
+
+print("=== 点赞小功能 ===")
+
+while True:
+    print("\n当前点赞数:", like_count)
+    print("1 - 点赞 / 取消点赞")
+    print("2 - 退出")
+    
+    choice = input("请选择(1/2): ")
+    
+    if choice == "1":
+        if not is_liked:
+            like_count += 1
+            is_liked = True
+            print("✅ 点赞成功！")
+        else:
+            like_count -= 1
+            is_liked = False
+            print("❌ 已取消点赞")
+    
+    elif choice == "2":
+        print("退出程序～")
+        break
+    
+    else:
+        print("输入错误，请输入1或2")
